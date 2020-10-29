@@ -1,0 +1,26 @@
+@import 'colors';
+
+.page {
+  margin-top: 3.8em;
+
+  .meta {
+    padding: 3em 0;
+
+    h1 {
+      font-size: 4em;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .contents {
+    background: $background-lighter;
+    padding: 3em 0;
+  }
+}

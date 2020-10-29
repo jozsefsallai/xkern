@@ -1,0 +1,39 @@
+.imageblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image, .contents {
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  .image {
+    line-height: 0;
+    text-align: center;
+
+    img {
+      max-height: 100vh;
+      max-width: 100%;
+    }
+  }
+
+  .contents {
+    padding: 2em;
+    text-align: right;
+
+    &.reverse {
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 3.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+}

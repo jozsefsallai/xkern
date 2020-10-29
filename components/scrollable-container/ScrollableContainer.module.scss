@@ -1,0 +1,11 @@
+.unscroll {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.switcher {
+  position: fixed;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+}

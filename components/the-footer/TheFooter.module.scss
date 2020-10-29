@@ -1,0 +1,12 @@
+@import 'colors';
+
+.footer {
+  border-top: 2px solid $background-secondary;
+  color: $text-secondary;
+  text-align: center;
+  font-size: 0.9em;
+
+  .copy {
+    padding: 5em 1.5em;
+  }
+}

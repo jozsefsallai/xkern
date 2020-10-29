@@ -1,0 +1,30 @@
+@import './colors';
+@import './fonts';
+
+body {
+  margin: 0;
+  font: 16px / 1.6 'Roboto', sans-serif;
+  background: $background-primary;
+  color: $text-primary;
+}
+
+.mid {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $text-secondary;
+  transition: color 150ms linear;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

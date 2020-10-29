@@ -1,0 +1,16 @@
+@import 'colors';
+
+.fullpageBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &.secondary {
+    background: $background-lighter;
+  }
+}
+
+.wrapper {
+  flex: 1;
+}

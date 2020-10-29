@@ -1,0 +1,38 @@
+@import 'colors';
+
+.item {
+  cursor: pointer;
+  padding: 0.5em;
+
+  .dot {
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    background: $text-primary;
+    border-radius: 100%;
+    transform: scale(1);
+    display: block;
+
+    transition: transform 150ms linear;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    &.active {
+      transform: scale(2);
+    }
+  }
+
+  &:hover {
+    .dot {
+      transform: scale(1.5);
+    }
+  }
+
+  &.active {
+    .dot {
+      transform: scale(2);
+    }
+  }
+}

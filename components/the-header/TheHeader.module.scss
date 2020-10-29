@@ -1,0 +1,27 @@
+@import 'colors';
+
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $background-primary;
+  padding: .7em 2em;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 32px;
+      margin-right: 0.5em;
+    }
+
+    span {
+      font-size: 1.4em;
+      font-weight: 700;
+    }
+  }
+}

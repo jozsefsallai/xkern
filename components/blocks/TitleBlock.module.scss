@@ -1,0 +1,49 @@
+@import 'colors';
+
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+.container {
+  text-align: center;
+}
+
+.title, .subtitle {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.title {
+  font-size: 6em;
+}
+
+.slogan {
+  font-size: 2em;
+  color: $text-secondary;
+  font-weight: 300;
+  letter-spacing: .5rem;
+  color: $text-secondary;
+  background:
+    $text-secondary
+    -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from($text-secondary),
+      to($text-secondary),
+      color-stop(0.5, $text-primary)
+    );
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s infinite;
+}
