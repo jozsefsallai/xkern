@@ -10,12 +10,12 @@ export interface IMetaParams {
 }
 
 const Meta = ({ title, description, image, url, noAppendSiteName }: IMetaParams) => {
-  if (!title) {
-    title = 'xKern Technologies';
-  }
-
   if (title && !noAppendSiteName) {
     title = `${title} - xKern Technologies`;
+  }
+
+  if (!title) {
+    title = 'xKern Technologies';
   }
 
   image = buildUrl(image);

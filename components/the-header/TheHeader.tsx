@@ -2,6 +2,7 @@ import styles from './TheHeader.module.scss';
 
 import NavigationItem, { NavigationItemOpts } from '../navigation/NavigationItem';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 const links: NavigationItemOpts[] = [
   {
@@ -22,9 +23,13 @@ const links: NavigationItemOpts[] = [
   }
 ];
 
-const TheHeader = () => {
+interface TheHeaderProps {
+  fixed?: boolean;
+}
+
+const TheHeader = ({ fixed }: TheHeaderProps) => {
   return (
-    <header className={styles.siteHeader}>
+    <header className={clsx(styles.siteHeader, { [`${styles.fixed}`]: fixed })}>
       <div className="flex-wrapper">
         <Link href="/">
           <div className={styles.logo}>

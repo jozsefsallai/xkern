@@ -30,7 +30,6 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
   };
 
   const scroll = (idx: number) => {
-    console.log(idx);
     if (idx < 0 || idx >= refs.current.length) {
       return;
     }
@@ -79,11 +78,11 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
   };
 
   useEffect(() => {
-    window.addEventListener('mousewheel', handleScroll, { passive: false });
+    window.addEventListener('wheel', handleScroll, { passive: false });
     window.addEventListener('keyup', handleKey);
 
     return () => {
-      window.removeEventListener('mousewheel', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('keyup', handleKey);
     };
   }, []);
