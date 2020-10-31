@@ -34,9 +34,13 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
       return;
     }
 
+    const firstBlock = refs.current[0].current;
     currentBlockRef.current = idx;
+
     setCurrentBlock(idx);
-    refs.current[idx].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // 2000iq
+    firstBlock.style.marginTop = `${firstBlock.offsetHeight * idx * -1}px`;
   };
 
   const canScroll = useRef(true);
@@ -50,12 +54,12 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
       const scrolled = stepCurrentBlock(delta);
 
       if (scrolled) {
-        // 1 second cooldown if scroll was successful
+        // 300ms cooldown if scroll was successful
         canScroll.current = false;
 
         setTimeout(() => {
           canScroll.current = true;
-        }, 1000);
+        }, 300);
       }
     }
   };

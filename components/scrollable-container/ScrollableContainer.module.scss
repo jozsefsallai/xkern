@@ -1,6 +1,10 @@
 .unscroll {
   overflow-y: hidden;
   height: 100vh;
+
+  > div {
+    transition: margin-top 300ms ease-in-out;
+  }
 }
 
 .switcher {

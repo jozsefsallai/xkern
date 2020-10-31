@@ -28,3 +28,38 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken($text-primary, 10%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $text-primary;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: $text-secondary;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-secondary;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::selection {
+  background: $text-primary;
+  color: $background-primary;
+}
