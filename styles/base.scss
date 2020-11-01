@@ -63,3 +63,84 @@ a {
   background: $text-primary;
   color: $background-primary;
 }
+
+@keyframes jiggle {
+  0%, 100% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+form {
+  .jiggle {
+    animation: jiggle 100ms infinite;
+  }
+
+  .form-error {
+    color: $error-red;
+    vertical-align: middle;
+  }
+}
+
+.input-group {
+  margin-bottom: 1.5em;
+}
+
+label, input, textarea {
+  display: block;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  font: 16px / 1.6 'Roboto', sans-serif;
+  padding: 0.8em 1em;
+  background: $background-primary;
+  color: $text-primary;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+button {
+  font: 16px / 1.6 'Roboto', sans-serif;
+  border: 0;
+  background: $background-primary;
+  color: $text-primary;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 0.6em 3em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background 150ms linear;
+
+  &:hover {
+    background: lighten($background-primary, 5%);
+  }
+
+  &[type="submit"] {
+    background: $action-button;
+
+    &:hover {
+      background: darken($action-button, 10%);
+    }
+  }
+
+  &.single-button {
+    margin-right: 1em;
+  }
+}
