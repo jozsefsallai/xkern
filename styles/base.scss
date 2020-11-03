@@ -108,6 +108,10 @@ input, textarea {
   background: $background-primary;
   color: $text-primary;
   border-radius: 5px;
+
+  .secondary-colors & {
+    background: $background-secondary;
+  }
 }
 
 textarea {
@@ -132,7 +136,7 @@ button {
     background: lighten($background-primary, 5%);
   }
 
-  &[type="submit"] {
+  &[type="submit"], &.primary {
     background: $action-button;
 
     &:hover {
@@ -142,5 +146,24 @@ button {
 
   &.single-button {
     margin-right: 1em;
+  }
+}
+
+.dropzone {
+  font-size: 0.9em;
+  padding: 1em;
+  text-align: center;
+  background: $background-primary;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .secondary-colors & {
+    background: $background-secondary;
+  }
+
+  svg {
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
   }
 }

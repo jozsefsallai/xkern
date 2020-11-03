@@ -1,0 +1,43 @@
+@import 'colors';
+
+.overlay {
+  background: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  max-width: 90vw;
+  max-height: 90vh;
+  min-width: 50vw;
+
+  background: $background-primary;
+  overflow: auto;
+
+  box-sizing: border-box;
+  padding: 1em 2em;
+  border-radius: 5px;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    cursor: pointer;
+
+    &:hover {
+      color: darken($text-primary, 20%);
+    }
+  }
+}

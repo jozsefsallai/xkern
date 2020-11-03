@@ -14,8 +14,8 @@ const links: NavigationItemOpts[] = [
     label: 'Projects'
   },
   {
-    href: '/jobs',
-    label: 'Jobs'
+    href: '/careers',
+    label: 'Careers'
   },
   {
     href: '/contact',
