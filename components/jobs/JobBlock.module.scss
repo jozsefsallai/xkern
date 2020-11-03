@@ -1,10 +1,16 @@
 @import 'colors';
+@import 'mixins';
 
 .job {
   width: calc(50% - 1em);
   box-sizing: border-box;
   background: $background-primary;
   padding: 2em;
+
+  @include break-at-second {
+    width: auto;
+    margin-bottom: 2em;
+  }
 
   h2 {
     padding: 0;

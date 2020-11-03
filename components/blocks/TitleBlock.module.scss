@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 @keyframes shimmer {
   0% {
@@ -22,6 +23,10 @@
 
 .title {
   font-size: 6em;
+
+  @include break-at-second {
+    font-size: 4em;
+  }
 }
 
 .slogan {
@@ -46,4 +51,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 2.5s infinite;
+
+  @include break-at-second {
+    font-size: 1.5em;
+  }
 }

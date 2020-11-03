@@ -1,7 +1,13 @@
+@import 'mixins';
+
 .jobs {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
+
+  @include break-at-second {
+    display: block;
+  }
 }

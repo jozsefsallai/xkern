@@ -1,0 +1,13 @@
+@import './globals';
+
+@mixin break-at-main {
+  @media only screen and ( max-width: $main-width ) {
+    @content
+  }
+};
+
+@mixin break-at-second {
+  @media only screen and ( max-width: $second-width ) {
+    @content
+  }
+}

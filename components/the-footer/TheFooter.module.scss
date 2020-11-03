@@ -6,6 +6,17 @@
   text-align: center;
   font-size: 0.9em;
 
+  &.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .copy {
+      padding: 3em 1.5em;
+    }
+  }
+
   .copy {
     padding: 5em 1.5em;
   }

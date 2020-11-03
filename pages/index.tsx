@@ -2,6 +2,7 @@ import ImageBlock from '@/components/blocks/ImageBlock';
 import TitleBlock from '@/components/blocks/TitleBlock';
 import Meta from '@/components/Meta';
 import ScrollableContainer from '@/components/scrollable-container/ScrollableContainer';
+import TheFooter from '@/components/the-footer/TheFooter';
 
 const Home = () => {
   return (
@@ -36,6 +37,8 @@ const Home = () => {
           <p>
             Cras mattis luctus vulputate. Donec vitae tempor lacus, in elementum risus.
           </p>
+
+          <TheFooter absolute={true} />
         </ImageBlock>
       </ScrollableContainer>
     </>

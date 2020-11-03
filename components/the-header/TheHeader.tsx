@@ -3,6 +3,10 @@ import styles from './TheHeader.module.scss';
 import NavigationItem, { NavigationItemOpts } from '../navigation/NavigationItem';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const links: NavigationItemOpts[] = [
   {
@@ -28,9 +32,18 @@ interface TheHeaderProps {
 }
 
 const TheHeader = ({ fixed }: TheHeaderProps) => {
+  const [navOpened, setNavOpened] = useState(false);
+
+  const toggleHamburger = () => setNavOpened(opened => !opened);
+
+  const router = useRouter();
+  useEffect(() => {
+    setNavOpened(false);
+  }, [router.pathname]);
+
   return (
     <header className={clsx(styles.siteHeader, { [`${styles.fixed}`]: fixed })}>
-      <div className="flex-wrapper">
+      <div className="flex-wrapper header-flex">
         <Link href="/">
           <div className={styles.logo}>
             <img src="/images/logo.jpg" alt="xKern Technologies" />
@@ -38,9 +51,13 @@ const TheHeader = ({ fixed }: TheHeaderProps) => {
           </div>
         </Link>
 
-        <nav className="mainnav">
+        <nav className={clsx(styles.mainnav, { [`${styles.opened}`]: navOpened })}>
           {links.map(link => <NavigationItem key={link.href} {...link} />)}
         </nav>
+
+        <div className={styles.hamburger} onClick={toggleHamburger}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
       </div>
     </header>
   );

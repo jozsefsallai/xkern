@@ -44,6 +44,8 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
   };
 
   const canScroll = useRef(true);
+  const touchStartY = useRef(0);
+  const lastStartY = useRef(0);
 
   const handleScroll = (e: WheelEvent) => {
     e.preventDefault();
@@ -56,6 +58,37 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
       if (scrolled) {
         // 300ms cooldown if scroll was successful
         canScroll.current = false;
+
+        setTimeout(() => {
+          canScroll.current = true;
+        }, 300);
+      }
+    }
+  };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    touchStartY.current = e.touches[0].screenY;
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    e.preventDefault();
+
+    const difference = touchStartY.current - e.touches[0].screenY;
+    const lastTouchDifference = lastStartY.current - e.touches[0].screenY;
+
+    if (Math.abs(difference) < 50 || Math.abs(lastTouchDifference) < 50) {
+      return;
+    }
+
+    const delta = Math.sign(difference);
+
+    if (canScroll.current) {
+      const scrolled = stepCurrentBlock(delta);
+
+      if (scrolled) {
+        // 300ms cooldown if scroll was successful
+        canScroll.current = false;
+        lastStartY.current = e.touches[0].screenY;
 
         setTimeout(() => {
           canScroll.current = true;
@@ -83,10 +116,14 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
 
   useEffect(() => {
     window.addEventListener('wheel', handleScroll, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
     window.addEventListener('keyup', handleKey);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('keyup', handleKey);
     };
   }, []);

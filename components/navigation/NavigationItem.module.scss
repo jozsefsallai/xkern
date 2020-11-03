@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 .item {
   display: inline-block;
@@ -6,5 +7,9 @@
 
   &.active {
     color: $text-primary;
+  }
+
+  @include break-at-second {
+    display: block;
   }
 }

@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 .page {
   .meta {
@@ -14,6 +15,19 @@
       font-size: 1.8em;
       margin: 0;
       padding: 0;
+    }
+
+    @include break-at-second {
+      padding: 2em 0;
+      text-align: center;
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
     }
   }
 

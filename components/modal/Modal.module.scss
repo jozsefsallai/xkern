@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 .overlay {
   background: rgba(255, 255, 255, 0.2);
@@ -28,6 +29,22 @@
   box-sizing: border-box;
   padding: 1em 2em;
   border-radius: 5px;
+
+  @include break-at-main {
+    min-width: 70vw;
+  }
+
+  @include break-at-second {
+    max-height: none;
+    max-width: none;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transform: none;
+  }
 
   .close {
     position: absolute;

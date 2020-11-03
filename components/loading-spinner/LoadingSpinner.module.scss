@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .spinner {
   display: inline-block;
   width: 12px;
@@ -8,6 +10,12 @@
   border-radius: 100%;
   animation: spin 1s infinite linear;
   vertical-align: middle;
+
+  @include break-at-second {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
 }
 
 @keyframes spin {

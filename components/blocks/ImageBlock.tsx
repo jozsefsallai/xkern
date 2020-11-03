@@ -14,18 +14,14 @@ interface ImageBlockParams extends BlockParams {
 const ImageBlock = ({ src, alt, id, secondary, children, reverse }: ImageBlockParams) => {
   return (
     <Block id={id} secondary={secondary}>
-      <div className={styles.imageblock}>
-        {!reverse && <div className={styles.contents}>
-          {children}
-        </div>}
-
+      <div className={clsx(styles.imageblock, { [`${styles.reverse}`]: reverse })}>
         <div className={styles.image}>
           <img src={src} alt={alt} />
         </div>
 
-        {reverse && <div className={clsx(styles.contents, styles.reverse)}>
+        <div className={styles.contents}>
           {children}
-        </div>}
+        </div>
       </div>
     </Block>
   );
