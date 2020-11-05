@@ -6,14 +6,33 @@
   width: calc(#{$main-width / 3} - 2em);
   box-sizing: border-box;
   background: $background-primary;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+
+  margin-right: 2em;
+  margin-bottom: 2em;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
   @include break-at-main {
     width: calc(#{$second-width / 2} - 2em);
+
+    &:nth-child(3n) {
+      margin-right: 2em;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 
   @include break-at-second {
     width: auto;
     margin-bottom: 2em;
+    margin-right: 0;
   }
 
   .image {
@@ -34,6 +53,10 @@
 
     h3 {
       font-weight: 300;
+    }
+
+    .description {
+      color: $text-secondary;
     }
 
     .links {

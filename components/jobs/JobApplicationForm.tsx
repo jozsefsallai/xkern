@@ -63,7 +63,7 @@ const JobApplicationForm = ({ job, send }: JobApplicationFormParams) => {
       return;
     }
 
-    setError(res.message);
+    setError(res.message ?? 'Internal Server Error');
     jiggleForm();
   };
 

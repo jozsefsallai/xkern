@@ -23,7 +23,10 @@ const JobBlock = ({ job, onSelected }: JobBlockParams) => {
   return (
     <div className={styles.job}>
       <h2>{title}</h2>
-      <p>{description}</p>
+
+      <div className={styles.description}>
+        <p>{description}</p>
+      </div>
 
       <div className={styles.moreInfo}>
         <a href={url} target="_blank" rel="noreferrer noopener">

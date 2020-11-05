@@ -22,7 +22,9 @@ const ProjectBlock = ({ project }: { project: Project }) => {
       <div className={styles.info}>
         <h2>{name}</h2>
         <h3>{subtitle}</h3>
-        <p>{description}</p>
+        <div className={styles.description}>
+          <p>{description}</p>
+        </div>
 
         {links && links.length && (
           <div className={styles.links}>

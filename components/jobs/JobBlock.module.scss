@@ -6,16 +6,29 @@
   box-sizing: border-box;
   background: $background-primary;
   padding: 2em;
+  border-radius: 5px;
+
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
 
   @include break-at-second {
     width: auto;
     margin-bottom: 2em;
+    margin-right: 0;
   }
 
   h2 {
     padding: 0;
     margin: 0;
     font-size: 1.5em;
+  }
+
+  .description {
+    display: block;
   }
 
   .moreInfo {

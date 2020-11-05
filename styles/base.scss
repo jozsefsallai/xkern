@@ -8,6 +8,10 @@ body {
   font: 16px / 1.6 'Roboto', sans-serif;
   background: $background-primary;
   color: $text-primary;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 .mid {

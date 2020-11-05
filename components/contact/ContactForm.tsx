@@ -88,7 +88,7 @@ const ContactForm = ({ send }: ContactFormParams) => {
       return;
     }
 
-    setError(res.message);
+    setError(res.message ?? 'Internal Server Error');
     jiggleForm();
   };
 

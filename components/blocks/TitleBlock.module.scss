@@ -30,7 +30,7 @@
 }
 
 .slogan {
-  font-size: 2em;
+  font-size: 1.8em;
   color: $text-secondary;
   font-weight: 300;
   letter-spacing: .5rem;
@@ -39,18 +39,18 @@
     $text-secondary
     -webkit-gradient(
       linear,
-      left top,
-      right top,
+      100% 0,
+      0 0,
       from($text-secondary),
-      to($text-secondary),
-      color-stop(0.5, $text-primary)
+      color-stop(0.5, $text-primary),
+      to($text-secondary)
     );
   background-repeat: no-repeat;
-  background-size: 200px 100%;
-  background-position: 0 0;
+  background-position: -15rem top;
+  background-size: 5rem 100%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 2.5s infinite;
+  animation: shimmer 3s infinite;
 
   @include break-at-second {
     font-size: 1.5em;
