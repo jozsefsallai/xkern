@@ -2,7 +2,7 @@ import styles from './ContactForm.module.scss';
 
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
-import { createRef, FormEvent, useState } from 'react';
+import { useRef, FormEvent, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import LoadingSpinner from '../loading-spinner/LoadingSpinner';
 import Link from 'next/link';
@@ -39,7 +39,7 @@ const ContactForm = ({ send }: ContactFormParams) => {
 
   const router = useRouter();
 
-  const captchaRef = createRef<ReCAPTCHA>();
+  const captchaRef = useRef<ReCAPTCHA>({});
 
   const jiggleForm = () => {
     setJiggle(true);

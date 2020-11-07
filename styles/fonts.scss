@@ -1,2 +1,31 @@
-// TODO: serve local font files
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+// roboto
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('./fonts/roboto/roboto-300.woff2') format('woff2'),
+       url('./fonts/roboto/roboto-300.woff') format('woff'),
+       url('./fonts/roboto/roboto-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('./fonts/roboto/roboto-regular.woff2') format('woff2'),
+       url('./fonts/roboto/roboto-regular.woff') format('woff'),
+       url('./fonts/roboto/roboto-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'),
+       url('./fonts/roboto/roboto-900.woff2') format('woff2'),
+       url('./fonts/roboto/roboto-900.woff') format('woff'),
+       url('./fonts/roboto/roboto-900.ttf') format('truetype');
+}

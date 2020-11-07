@@ -1,4 +1,6 @@
 import ContactForm, { ContactFormFields, ContactFormServerResponse } from '@/components/contact/ContactForm';
+import ContactInfo from '@/components/contact/ContactInfo';
+import Map from '@/components/contact/Map';
 import Meta from '@/components/Meta';
 import Page from '@/components/page/Page';
 
@@ -26,6 +28,8 @@ const ContactPage = () => {
       />
 
       <ContactForm send={send} />
+      <ContactInfo />
+      <Map lat={48.85} lng={2.29} />
     </Page>
   );
 };

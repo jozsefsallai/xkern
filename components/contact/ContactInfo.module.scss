@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'globals';
+@import 'mixins';
+
+.wrapper {
+  margin-top: 4em;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include break-at-second {
+    display: block;
+    margin-bottom: 4em;
+  }
+
+  .block {
+    width: $main-width / 3;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    text-align: center;
+
+    border-left: 1px solid $gray-gradient-from;
+    border-right: 1px solid $gray-gradient-from;
+
+    &:first-child, &:nth-child(4n) {
+      border-left-width: 0;
+    }
+
+    &:last-child, &:nth-child(3n) {
+      border-right-width: 0;
+    }
+
+    @include break-at-main {
+      width: $second-width / 3;
+    }
+
+    @include break-at-second {
+      width: auto;
+      border: 0;
+      margin-bottom: 0;
+    }
+
+    .header {
+      .icon {
+        display: block;
+
+        svg {
+          font-size: 3em;
+
+          * {
+            fill: url(#graygradient);
+          }
+        }
+      }
+
+      h2 {
+        font-size: 1.2em;
+        margin: 0.5em 0;
+        padding: 0;
+        text-transform: uppercase;
+
+        display: inline-block;
+        background: $gray-gradient-from $gray-gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

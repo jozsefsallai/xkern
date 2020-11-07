@@ -147,7 +147,6 @@ HTML files (nginx, Netlify, GitHub Pages, etc.).
 PascalCase
 - Function and variable names should be written in camelCase
 - Directory names should always be kebab-case
-- WRITE FUNC AFTER EACH FUNCTION (THANKS BOROKA)
 
 ### General Rules
 
