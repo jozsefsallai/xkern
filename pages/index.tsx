@@ -41,9 +41,9 @@ const Home = () => {
           </p>
         </ImageBlock>
 
-        <Block id="footer">
+        <Block id="footer" center>
           <div style={{ padding: '3em' }}>
-            <h2 style={{ textAlign: 'center' }} className="subtitle">Lorem Ipsum</h2>
+            <h2 className="subtitle">Lorem Ipsum</h2>
             <p>
               Dolor sit amet, consectetur adipiscing elit. Mauris in nunc sit
               amet purus sagittis accumsan.
