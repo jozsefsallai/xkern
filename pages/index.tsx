@@ -1,5 +1,7 @@
+import Block from '@/components/blocks/Block';
 import ImageBlock from '@/components/blocks/ImageBlock';
 import TitleBlock from '@/components/blocks/TitleBlock';
+import ContactInfo from '@/components/contact/ContactInfo';
 import Meta from '@/components/Meta';
 import ScrollableContainer from '@/components/scrollable-container/ScrollableContainer';
 import TheFooter from '@/components/the-footer/TheFooter';
@@ -37,9 +39,18 @@ const Home = () => {
           <p>
             Cras mattis luctus vulputate. Donec vitae tempor lacus, in elementum risus.
           </p>
-
-          <TheFooter absolute={true} />
         </ImageBlock>
+
+        <Block id="footer">
+          <div style={{ padding: '3em' }}>
+            <h2 style={{ textAlign: 'center' }} className="subtitle">Lorem Ipsum</h2>
+            <p>
+              Dolor sit amet, consectetur adipiscing elit. Mauris in nunc sit
+              amet purus sagittis accumsan.
+            </p>
+          </div>
+          <TheFooter home />
+        </Block>
       </ScrollableContainer>
     </>
   );

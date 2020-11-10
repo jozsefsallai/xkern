@@ -43,7 +43,7 @@ const JobsPage = () => {
       />
 
       <JobList jobs={jobs} onSelected={setSelectedJob} />
-      {selectedJob && <JobApplicationModal job={selectedJob} onClose={handleModalClose} />}
+      <JobApplicationModal job={selectedJob} onClose={handleModalClose} />
     </Page>
   );
 };

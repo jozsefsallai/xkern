@@ -13,15 +13,13 @@
 
 .container {
   text-align: center;
-}
-
-.title, .subtitle {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
+  user-select: none;
 }
 
 .title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
   font-size: 6em;
 
   @include break-at-second {
@@ -31,6 +29,7 @@
 
 .slogan {
   font-size: 1.8em;
+  white-space: nowrap;
   color: $text-secondary;
   font-weight: 300;
   letter-spacing: .5rem;
@@ -53,6 +52,6 @@
   animation: shimmer 3s infinite;
 
   @include break-at-second {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }

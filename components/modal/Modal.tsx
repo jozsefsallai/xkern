@@ -8,22 +8,26 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 export interface ModalProps {
   onClose(): void;
+  display: boolean;
   children: ReactNode;
 }
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ display, onClose, children }) => {
   useEffect(() => {
-    document.body.classList.add('noscroll');
-    return () => document.body.classList.remove('noscroll');
-  }, []);
+    if (display) {
+      document.body.classList.add('noscroll');
+    } else {
+      document.body.classList.remove('noscroll');
+    }
+  }, [ display ]);
 
   return (
     <AnimatePresence>
-      <motion.div
+      {display && <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ ease: 'linear', duration: 0.2 }}
+        transition={{ ease: 'linear', duration: 0.3 }}
         key="modal"
       >
         <div className={styles.modal}>
@@ -35,7 +39,7 @@ const Modal = ({ onClose, children }) => {
         </div>
 
         <div className={styles.overlay} onClick={onClose} />
-      </motion.div>
+      </motion.div>}
     </AnimatePresence>
   );
 };

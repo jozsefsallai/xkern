@@ -5,11 +5,16 @@
   background: $background-primary;
   padding: .7em 2em;
 
+  @include break-at-second {
+    padding: .7em 1em;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 
     img {
       width: 32px;
@@ -39,13 +44,22 @@
   }
 
   .mainnav {
+    overflow: hidden;
+
     @include break-at-second {
-      display: none;
+      font-size: 0;
+      opacity: 0;
       background: lighten($background-primary, 15%);
       margin-top: 1em;
+      transition: font-size 350ms 125ms linear,
+                  opacity 125ms linear;
 
       &.opened {
-        display: block;
+        font-size: initial;
+        opacity: 1;
+
+        transition: font-size 125ms linear,
+                    opacity 350ms 125ms linear;
       }
     }
   }

@@ -2,9 +2,9 @@ import styles from './TheFooter.module.scss';
 
 import clsx from 'clsx';
 
-const TheFooter = ({ absolute }: { absolute?: boolean }) => {
+const TheFooter = ({ home }: { home?: boolean }) => {
   return (
-    <footer className={clsx(styles.footer, { [`${styles.absolute}`]: absolute })}>
+    <footer className={clsx(styles.footer, { [`${styles.home}`]: home })}>
       <div className={styles.copy}>
         {new Date().getFullYear()} &copy; xKern.
       </div>

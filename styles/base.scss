@@ -38,6 +38,12 @@ a {
   }
 }
 
+.subtitle {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
 .flex-wrapper {
   display: flex;
   align-items: center;
@@ -201,5 +207,11 @@ button {
     font-size: 1.5em;
     vertical-align: middle;
     margin-right: 0.5em;
+  }
+}
+
+.no-display-mobile {
+  @include break-at-second {
+    display: none;
   }
 }

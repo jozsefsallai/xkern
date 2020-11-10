@@ -26,8 +26,8 @@ const JobApplicationModal = ({ onClose, job }: JobApplicationModalProps) => {
   };
 
   return (
-    <Modal onClose={onClose}>
-      <h1>Applying for "{job.title}"</h1>
+    <Modal display={!!job} onClose={onClose}>
+      {job && <h1>Applying for "{job.title}"</h1>}
 
       <JobApplicationForm job={job} send={send} />
     </Modal>

@@ -86,15 +86,14 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
       const scrolled = stepCurrentBlock(delta);
 
       if (scrolled) {
-        // 300ms cooldown if scroll was successful
         canScroll.current = false;
         lastStartY.current = e.touches[0].screenY;
-
-        setTimeout(() => {
-          canScroll.current = true;
-        }, 300);
       }
     }
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    canScroll.current = true;
   };
 
   const handleKey = (e: KeyboardEvent) => {
@@ -118,12 +117,14 @@ const ScrollableContainer = ({ children }: ScrollableContainerOpts) => {
     window.addEventListener('wheel', handleScroll, { passive: false });
     window.addEventListener('touchstart', handleTouchStart, { passive: false });
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchend', handleTouchEnd, { passive: false });
     window.addEventListener('keyup', handleKey);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
       window.removeEventListener('keyup', handleKey);
     };
   }, []);
