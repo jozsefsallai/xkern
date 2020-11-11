@@ -50,20 +50,26 @@ const JobApplicationForm = ({ job, send }: JobApplicationFormParams) => {
     setError('');
     setSucess(false);
 
-    const res = await send(job.title, {
-      name,
-      email,
-      resume: acceptedFiles[0]
-    });
+    try {
+      const res = await send(job.title, {
+        name,
+        email,
+        resume: acceptedFiles[0]
+      });
 
-    setSending(false);
+      setSending(false);
 
-    if (res.code === 0) {
-      setSucess(true);
-      return;
+      if (res.code === 0) {
+        setSucess(true);
+        return;
+      }
+
+      setError(res.message ?? 'Internal Server Error');
+    } catch (err) {
+      console.error(err);
+      setError('Internal Server Error');
     }
 
-    setError(res.message ?? 'Internal Server Error');
     jiggleForm();
   };
 

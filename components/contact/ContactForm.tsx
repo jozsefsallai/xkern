@@ -56,39 +56,45 @@ const ContactForm = ({ send }: ContactFormParams) => {
     setError('');
     setSuccess(false);
 
-    const res = await send({
-      name,
-      email,
-      message,
-      recaptcha: captchaRef.current.getValue()
-    });
+    try {
+      const res = await send({
+        name,
+        email,
+        message,
+        recaptcha: captchaRef.current.getValue()
+      });
 
-    setSending(false);
+      setSending(false);
 
-    if (res.code === 0) {
-      setSuccess(true);
-      return;
+      if (res.code === 0) {
+        setSuccess(true);
+        return;
+      }
+
+      if (res.code >= 210 && res.code <= 220) {
+        captchaRef.current.reset();
+        setError('CAPTCHA reset.');
+        jiggleForm();
+
+        return;
+      }
+
+      if (res.code >= 400 && res.code <= 404) {
+        window.location.reload();
+        return;
+      }
+
+      if (res.code === 910) {
+        router.push('/');
+        return;
+      }
+
+      setError(res.message ?? 'Internal Server Error');
+    } catch (err) {
+      console.error(err);
+      setError('Internal Server Error');
     }
 
-    if (res.code >= 210 && res.code <= 220) {
-      captchaRef.current.reset();
-      setError('CAPTCHA reset.');
-      jiggleForm();
-
-      return;
-    }
-
-    if (res.code >= 400 && res.code <= 404) {
-      window.location.reload();
-      return;
-    }
-
-    if (res.code === 910) {
-      router.push('/');
-      return;
-    }
-
-    setError(res.message ?? 'Internal Server Error');
     jiggleForm();
   };
 

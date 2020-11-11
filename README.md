@@ -41,6 +41,8 @@ The configuration file contains three options:
 
 - `NEXT_PUBLIC_RECAPTCHA_KEY` - the Google reCAPTCHA key to be used in the
 contact form.
+- `NEXT_PUBLIC_MAPS_API_KEY` - the Google Maps key to be used in the map from
+the contact page.
 - `NEXT_PUBLIC_CONTACT_URL` - the API URL that will be called when submitting
 the contact form.
 - `NEXT_PUBLIC_JOB_APPLICATION_URL` - the API URL that will be called when
