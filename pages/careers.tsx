@@ -7,23 +7,33 @@ import { useState } from 'react';
 const JobsPage = () => {
   const jobs: Job[] = [
     {
-      title: 'Senior Software Engineer',
-      description: 'Required expertise: Python, machine learning, and SCRUM.',
+      title: 'Solution Architect',
+      description: 'Profound experience with technologies to architect our software solutions, plan and oversee the development our software',
       url: 'https://google.com'
     },
     {
-      title: 'Junior Frontend Engineer',
-      description: 'Required expertise: React, HTML5, Material UI.',
+      title: 'Senior iOS Developer',
+      description: 'Proficiency in Swift, Xcode, instruments, storyboard, lldb and Cocoa Touch',
       url: 'https://google.com'
     },
     {
-      title: 'Database Engineer',
-      description: 'Apply to this one if you think you\'re a PostgreSQL master.',
+      title: 'Senior Android Developr',
+      description: 'Proficiency in Java, KOTLIN, Android Studio, profiling tools, DDMS, ADB etc',
       url: 'https://google.com'
     },
     {
-      title: 'Office Manager',
-      description: 'Just do stuff in our office.',
+      title: 'Junior iOS Developer',
+      description: 'Experience in Swift and Cocoa Touch to build the next generation iOS Applications',
+      url: 'https://google.com'
+    },
+    {
+      title: 'Junior Android Developer',
+      description: 'Experience with Android platform, design language and application development to build the next generation apps',
+      url: 'https://google.com'
+    },
+    {
+      title: 'Web Developer',
+      description: '',
       url: 'https://google.com'
     }
   ];
