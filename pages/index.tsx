@@ -19,34 +19,32 @@ const Home = () => {
         />
 
         <ImageBlock
-          src="/images/home/1.jpg"
+          src="/images/home/xkern_logo.png"
           id="image"
           secondary={true}
         >
-          <h2>Lorem Ipsum</h2>
+          <h2>Vision To Innovation</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris in nunc sit amet purus sagittis accumsan.
+            xKern is a software company that plans to bring about simple but significant changes to how technology is interwoven in everyday life. Our initial step is to lay a groundwork for our ideas to thrive with software experiences that everyone will understand and use. Once we have paved the foundation of our vision, we'll start building up on it with substantial changes and breakthrough platforms. Our products and services will heavily focus on user experience and accessibility. We strive to become the gold standard of software development with the quality of our software and services.
           </p>
         </ImageBlock>
 
         <ImageBlock
-          src="/images/home/2.jpg"
-          id="image2"
-          reverse={true}
+          src="/images/home/apps.png"
+          id="image3"
+          secondary={false}
         >
-          <h2>Cras Mattis</h2>
+          <h2>Native Applications</h2>
           <p>
-            Cras mattis luctus vulputate. Donec vitae tempor lacus, in elementum risus.
+            We build world class applications
           </p>
         </ImageBlock>
 
         <Block id="footer" center>
           <div style={{ padding: '3em' }}>
-            <h2 className="subtitle">Lorem Ipsum</h2>
+            <h2 className="subtitle">More Soon</h2>
             <p>
-              Dolor sit amet, consectetur adipiscing elit. Mauris in nunc sit
-              amet purus sagittis accumsan.
+              Our projects are in the works. We'll release something  truly remarkable soon enough
             </p>
           </div>
           <TheFooter home />

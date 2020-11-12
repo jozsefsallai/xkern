@@ -55,7 +55,7 @@ const ProjectsPage = () => {
 
     {
       name: 'PrivacyTools',
-      subtitle: 'Releases this month',
+      subtitle: 'Proecting iOS users',
       description: 'Protect your privacy on iOS devices by restricting how apps access permissions given to them, like contacts, camera, photos and microphone',
       image: '/images/projects/privtools.jpg',
       links: [
@@ -66,7 +66,15 @@ const ProjectsPage = () => {
         {
           icon: faYoutube,
           url: 'https://twitter.com/ARX8x/status/1271590611129253888'
-        }
+        },
+        {
+          icon:faLink,
+          url:  'https://www.reddit.com/r/jailbreak/comments/hdkxo2/beta_privacytools_control_how_apps_access_your/'
+        },
+        {
+          icon: faDownload,
+          url: 'https://apt.arx8x.net/net.arx8x.privacytools_0.2.2_iphoneos-arm.deb'
+        },
       ]
     },
 

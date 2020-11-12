@@ -46,7 +46,7 @@ const TheHeader = ({ fixed }: TheHeaderProps) => {
       <div className="flex-wrapper header-flex">
         <Link href="/">
           <div className={styles.logo}>
-            <img src="/images/logo.jpg" alt="xKern Technologies" />
+            <img src="/images/xkern_web_logo.png" alt="xKern Technologies" className={styles.logoImage}/>
             <span>xKern</span>
           </div>
         </Link>
