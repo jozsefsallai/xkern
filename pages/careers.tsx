@@ -13,7 +13,7 @@ const JobsPage = () => {
     },
     {
       title: 'Senior iOS Developer',
-      description: 'Proficiency in Swift, Xcode, instruments, storyboard, lldb and Cocoa Touch',
+      description: 'Proficiency in Swift, Xcode, instruments, storyboard, lldb and Cocoa Touch. Familiar with iOS design pattern, software technologies and development',
       url: '/jobs/jd/Job_Description_iOS_Senior.pdf'
     },
     {
@@ -33,18 +33,18 @@ const JobsPage = () => {
     },
     {
       title: 'Web Developer',
-      description: '',
-      url: 'https://google.com'
+      description: 'Good experience with HTML5, CSS3 and popular front end technologies like TypeScript, Vue, React, npm, jquery etc. ',
+      url: '/jobs/jd/Job_Description_Web.pdf'
     },
     {
       title: 'Front Office and Administration',
-      description: '',
-      url: ''
+      description: 'Excellent multilingual communication skills, friendly and cheerful mannerism, good administrative skills and fair experience with office software',
+      url: '/jobs/jd/Job_Description_Front_Office.pdf'
     },
     {
       title: 'Tester',
-      description: '',
-      url: ''
+      description: 'Analyzing software that we build, considering use cases and testing the software to find flaws, inconsistencies and suggesting improvements',
+      url: '/jobs/jd/Job_Description_Tester.pdf'
     }
   ];
 

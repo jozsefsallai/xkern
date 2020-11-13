@@ -17,23 +17,27 @@ const ContactInfo = () => {
       icon: faMobileAlt,
       title: 'Phone',
       lines: [
-        '+1 234 567 890',
-        '+1 098 765 432'
+        '+91 88485 61466',
+        '+91 96338 91413'
       ]
     },
     {
       icon: faMapMarkerAlt,
       title: 'Address',
       lines: [
-        '100 Test St., Demo City',
-        'Washington D.C., USA'
+        'Second Floor',
+        'Alathara Towers',
+        'Kazhakuttom Junction',
+        'NH Road, Kazhakuttom',
+        'Trivandrum',
+        '695582'
       ]
     },
     {
       icon: faEnvelope,
       title: 'Email',
       lines: [
-        'office@xkern.net'
+        'root@xkern.net'
       ]
     }
   ];

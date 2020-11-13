@@ -32,7 +32,7 @@ const Home = () => {
         <ImageBlock
           src="/images/home/apps.png"
           id="image3"
-          secondary={false}
+          secondary={true}
         >
           <h2>Native Applications</h2>
           <p>

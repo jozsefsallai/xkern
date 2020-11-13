@@ -5,14 +5,16 @@ import Meta from '@/components/Meta';
 import Page from '@/components/page/Page';
 
 const ContactPage = () => {
-  const send = async (fields: ContactFormFields): Promise<ContactFormServerResponse> => {
+  const send = async ({name, email, message, recaptcha}: ContactFormFields): Promise<ContactFormServerResponse> => {
+    const data = new FormData();
+    data.append('name', name);
+    data.append('email', email);
+    data.append('message', message);
+    data.append('recaptcha', recaptcha);
+
     const res = await fetch(process.env.NEXT_PUBLIC_CONTACT_URL, {
       method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(fields)
+      body: data
     });
 
     const json: ContactFormServerResponse = await res.json();

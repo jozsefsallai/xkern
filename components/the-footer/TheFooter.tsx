@@ -6,7 +6,7 @@ const TheFooter = ({ home }: { home?: boolean }) => {
   return (
     <footer className={clsx(styles.footer, { [`${styles.home}`]: home })}>
       <div className={styles.copy}>
-        {new Date().getFullYear()} &copy; xKern.
+        {new Date().getFullYear()} &copy; xKern Technologies
       </div>
     </footer>
   );
