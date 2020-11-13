@@ -25,7 +25,7 @@ const Home = () => {
         >
           <h2>Vision To Innovation</h2>
           <p>
-            xKern is a software company that plans to bring about simple but significant changes to how technology is interwoven in everyday life. Our initial step is to lay a groundwork for our ideas to thrive with software experiences that everyone will understand and use. Once we have paved the foundation of our vision, we'll start building up on it with substantial changes and breakthrough platforms. Our products and services will heavily focus on user experience and accessibility. We strive to become the gold standard of software development with the quality of our software and services.
+            xKern is a software company that plans to bring about simple but significant changes to how technology is interwoven in everyday life. We intend to pave a foundation of our vision and start building up on it with breakthrough platforms. Our products and services will heavily focus on user experience and accessibility. We strive to become the gold standard of software development with the quality of our software and services.
           </p>
         </ImageBlock>
 

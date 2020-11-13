@@ -9,32 +9,42 @@ const JobsPage = () => {
     {
       title: 'Solution Architect',
       description: 'Profound experience with technologies to architect our software solutions, plan and oversee the development our software',
-      url: 'https://google.com'
+      url: '/jobs/jd/Job_Description_Architect.pdf'
     },
     {
       title: 'Senior iOS Developer',
       description: 'Proficiency in Swift, Xcode, instruments, storyboard, lldb and Cocoa Touch',
-      url: 'https://google.com'
+      url: '/jobs/jd/Job_Description_iOS_Senior.pdf'
     },
     {
       title: 'Senior Android Developr',
       description: 'Proficiency in Java, KOTLIN, Android Studio, profiling tools, DDMS, ADB etc',
-      url: 'https://google.com'
+      url: '/jobs/jd/Job_Description_Android_Senior.pdf'
     },
     {
       title: 'Junior iOS Developer',
       description: 'Experience in Swift and Cocoa Touch to build the next generation iOS Applications',
-      url: 'https://google.com'
+      url: '/jobs/jd/Job_Description_iOS_Junior.pdf'
     },
     {
       title: 'Junior Android Developer',
       description: 'Experience with Android platform, design language and application development to build the next generation apps',
-      url: 'https://google.com'
+      url: '/jobs/jd/Job_Description_Android_Junior.pdf'
     },
     {
       title: 'Web Developer',
       description: '',
       url: 'https://google.com'
+    },
+    {
+      title: 'Front Office and Administration',
+      description: '',
+      url: ''
+    },
+    {
+      title: 'Tester',
+      description: '',
+      url: ''
     }
   ];
 
