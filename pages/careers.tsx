@@ -58,7 +58,7 @@ const JobsPage = () => {
     <Page title="Careers" subtitle="View our job offerings.">
       <Meta
         title="Careers"
-        description="Careers page description"
+        description="Join xKern in the mission to build next generation software and services."
         url="/careers"
       />
 

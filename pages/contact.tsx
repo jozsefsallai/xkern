@@ -25,13 +25,13 @@ const ContactPage = () => {
     <Page title="Contact Us" subtitle="Get in touch with us using the form below">
       <Meta
         title="Contact Us"
-        description="Shoot us a letter yo"
+        description="Get in touch with us to query information, report issues or just to appreciate our work"
         url="/contact"
       />
 
       <ContactForm send={send} />
       <ContactInfo />
-      <Map lat={48.85} lng={2.29} />
+      <Map lat={8.56662152817464} lng={76.87463985585467} />
     </Page>
   );
 };

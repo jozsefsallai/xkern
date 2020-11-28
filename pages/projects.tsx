@@ -112,7 +112,7 @@ const ProjectsPage = () => {
     <Page title="Projects" subtitle="Check out some of our projects!">
       <Meta
         title="Projects"
-        description="Projects page description"
+        description="Check out the software and services xKern has built so far."
         url="/projects"
       />
 
