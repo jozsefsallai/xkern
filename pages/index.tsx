@@ -32,7 +32,7 @@ const Home = () => {
         <ImageBlock
           src="/images/home/apps.png"
           id="image3"
-          secondary={false}
+          reverse={true}
         >
           <h2>Native Applications</h2>
           <p>
@@ -41,13 +41,35 @@ const Home = () => {
         </ImageBlock>
 
         <ImageBlock
-          src="/images/home/sprout.png"
+          src="/images/home/GitHub-Mark.png"
           id="image4"
+          secondary={true}
+        >
+          <h2>Open Source Contributions</h2>
+          <p>
+            The software and libraries we create will be partially or fully open source for others to refern, learn or contribute.
+          </p>
+        </ImageBlock>
+
+        <ImageBlock
+          src="/images/home/donation.png"
+          id="image4"
+          reverse={true}
+        >
+          <h2>Socially Comitted</h2>
+          <p>
+            We make our donations to charities and knowledge sources now and then to keep them running. Our donations are money, effort and knowledge. We believe in foundations that help humans and wildlife survive and thrive.
+          </p>
+        </ImageBlock>
+
+        <ImageBlock
+          src="/images/home/sprout.png"
+          id="image5"
           secondary={true}
         >
           <h2>Green Earth</h2>
           <p>
-            We plant a tree for every 200,000 INR we make. We have a commitment to our planent. In addition to being as eco-friendly as we can in our operations, we plant trees and nurture them for a better tomorrow. Join us in this.
+            We plant a tree for every 200,000 INR we make. We have a commitment to our planet. In addition to being as eco-friendly as we can in our operations, we plant trees and nurture them for a better tomorrow. Join us in this.
           </p>
         </ImageBlock>
 
