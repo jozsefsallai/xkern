@@ -32,8 +32,9 @@ const Modal = ({ display, onClose, children }) => {
       >
         <div className={styles.modal}>
           <div className={styles.close} onClick={onClose}>
-          <FontAwesomeIcon icon={faTimes} className={styles.alignFix}/>
+            <FontAwesomeIcon icon={faTimes} className={styles.alignFix}/>
           </div>
+
           {children}
         </div>
 
